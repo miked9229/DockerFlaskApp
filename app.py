@@ -6,7 +6,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-  return 'Hello, Docker!'
+  return 'Hello, Docker!\n'
+
+@app.route('/testing')
+def return_testing():   
+    return 'Testing the Flask service\n'
 
 @app.route('/widgets')
 def get_widgets():
