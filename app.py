@@ -22,7 +22,6 @@ def get_widgets():
   )
   cursor = mydb.cursor()
 
-
   cursor.execute("SELECT * FROM widgets")
 
   row_headers=[x[0] for x in cursor.description] #this will extract row headers
@@ -44,7 +43,6 @@ def db_init():
     password="Billy47689"
   )
   cursor = mydb.cursor()
-
   cursor.execute("DROP DATABASE IF EXISTS inventory")
   cursor.execute("CREATE DATABASE inventory")
   cursor.close()
